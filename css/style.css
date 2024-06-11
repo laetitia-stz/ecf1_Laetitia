@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+}
+
+/*************** BANDEAU ***************/
+.bandeau {
+    background-color: rgb(174, 169, 143);
+    text-align: center;
+    height: 5em;
+    padding: 0.5em 0 1.3em 0;
+}
+
+.bandeau .logo {
+    text-align: left;
+}
+
+.bandeau .titre {
+    text-align: center;
+}
+
+
+/**************** NAV ****************/
+nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 3em;
+    background-color: rgb(104, 103, 103);
+    padding-top: 1em;
+}
+
+nav .accueil {
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 0.1em;
+}
+
+.accueil a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 10px 8px 5px rgb(51, 51, 51);
+}
+
+.accueil a:hover {
+    font-weight: bold;
+    background-color: rgb(63, 74, 68);
+}
+
+nav .form {
+    text-align: right;
+    padding-right: 5em;
+    display: inline;
+}
+
+nav .form label,
+nav .form input,
+nav .form button {
+    font-size: 1.1em;
+    box-shadow: 10px 8px 5px rgb(78, 78, 78);
+}
+
+nav .form #submitCnx:hover {
+    background-color: rgb(63, 74, 68);
+}
+
+
+/********** AFFICHAGE PRODUITS **********/
+main .titreProduits h1 {
+    text-align: center;
+    padding-top: 0.7em;
+    padding-bottom: 0.5em;
+}
+
+main .titreProduits p {
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 1em;
+}
+
+main table {
+    border-collapse: collapse;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 5%;
+}
+
+main .tabProduits th,
+main .tabProduits td {
+    padding: 0.5em 2.1em;
+    border: solid 1px black;
+}
+
+main .tabProduits th {
+    background-color: rgb(207, 206, 206);
+}
+
+
+/************** PANIER **************/
+.panier h1 {
+    text-align: center;
+    padding: 0.8em 0;
+}
+
+.panier table {
+    border-collapse: collapse;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 5%;
+}
+
+.panier th {
+    padding: 0.7em 2.1em;
+    border: solid 1px black;
+    background-color: rgb(198, 198, 198);
+}
+
+.panier th,
+.panier td {
+    padding: 0.7em 2.1em;
+    border: solid 1px black;
+}
+
+
+/*************** FOOTER ***************/
+footer {
+    margin: 0;
+    padding-top: 15px;
+    height: 4em;
+    background-color: rgb(104, 103, 103);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    justify-content: center;
+}
+
+footer .reseaux {
+    grid-column: 1 / 4;
+    text-align: center;
+}
+
+footer .reseaux img {
+    width: 25px;
+}
