@@ -84,7 +84,6 @@ class Utilisateur extends Connection
 
         return $result->fetchAll();
     }
-
     public function login($email, $password)
     {
             $utilisateur = new Utilisateur();
@@ -93,8 +92,7 @@ class Utilisateur extends Connection
             foreach ($infoUser as $value) {
                
                 if ($password == $value['password']) {
-           
-                $_SESSION['utilisateur'] = $value;
+                    $_SESSION['utilisateur'] = $value;
  
                 header("Location: /ecf1/views/catalogue.php");
                 exit();
@@ -103,5 +101,5 @@ class Utilisateur extends Connection
             
         }
     }
+    
 }
-

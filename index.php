@@ -1,10 +1,5 @@
 <?php
-if (!isset($_SESSION['utilisateur'])) {
-    session_start();
-}
-if (!isset($_SESSION['panier'])) {
-    $_SESSION['panier'] = array();
-}
+session_start();
 
 include $_SERVER['DOCUMENT_ROOT'] . "/ecf1/views/header.html";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/ecf1/controllers/ProduitCTRL.php";
@@ -12,7 +7,20 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/ecf1/models/Utilisateur.php";
 
 
 $produit = new ProduitController();
+
+
+/********** AUTHENTIFICATION **********/
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $utilisateur = new Utilisateur();
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $utilisateur->login($email, $password);
+}
+
 ?>
+
 
 <body>
     <!-- ************ NAV *********** -->
@@ -29,20 +37,7 @@ $produit = new ProduitController();
         </div>
     </nav>
 
-    <?php
 
-
-    /********** AUTHENTIFICATION **********/
-    if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $utilisateur = new Utilisateur();
-
-        $utilisateur->setEmail($_POST['email']);
-        $utilisateur->setPassword($_POST['password']);
-
-        $utilisateur->login($_POST['email'], $_POST['password']);
-    }
-
-    ?>
 
     <!-- ************ Liste produits *********** -->
     <main>

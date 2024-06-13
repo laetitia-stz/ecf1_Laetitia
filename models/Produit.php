@@ -63,13 +63,13 @@ class Produit extends Connection
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function readID()
+    public function readID($id_produit)
     {
         $db = Connection::getConnect();
         $sql = $db->prepare("SELECT * FROM produit WHERE id_produit= :id_produit");
-        $sql->execute();
+        $sql->bindParam(':id_produit', $id_produit, PDO::PARAM_INT);
+                $sql->execute();
 
-        return $sql->fetchAll(PDO::FETCH_ASSOC);
+        return $sql->fetch(PDO::FETCH_ASSOC);
     }
-
 }

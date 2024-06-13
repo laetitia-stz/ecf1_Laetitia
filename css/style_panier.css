@@ -1,0 +1,98 @@
+/************** PANIER **************/
+.panier h1 {
+    text-align: center;
+    padding: 0.8em 0;
+}
+
+.panier table {
+    border-collapse: collapse;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1em;
+    padding-bottom: 3%;
+}
+
+.panier th {
+    padding: 0.7em 1em;
+    border: solid 1px black;
+    background-color: rgb(198, 198, 198);
+}
+
+.panier th,
+.panier td {
+    padding: 0.7em 1em;
+    border: solid 1px black;
+}
+
+#btCommander {
+    text-align: center;
+}
+
+#btCommander .bt {
+    font-size: 1.1em;
+    box-shadow: 10px 8px 5px rgb(78, 78, 78);
+    border-radius: 5px;
+    background-color: rgb(174, 173, 171);
+}
+
+#btCommander .bt:hover {
+    background-color: rgb(85, 87, 86);
+}
+
+.PanierVide {
+    text-align: center;
+}
+
+.PanierVide #msgPanierVide
+ {
+    font-size: 1.5em;
+    padding: 3em;
+    font-weight: bold;
+    color: brown;
+}
+
+.PanierVide a {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: black;
+    border: 2px black solid;
+    border-radius: 5px;
+    box-shadow: 10px 8px 5px rgb(78, 78, 78);
+    background-color: rgb(174, 173, 171);;
+    padding: 0.5%;
+}
+
+.PanierVide a:hover {
+    background-color: rgb(63, 74, 68);
+}
+
+
+.CommandeValide {
+    text-align: center;
+}
+
+.CommandeValide #msgCommandeValide {
+    color:rgb(39, 127, 93);
+    font-size: 1.5em;
+    padding: 3em;
+    font-weight: bold;
+
+}
+
+.CommandeValide a {
+    font-size: 1.4em;
+    text-decoration: none;
+    color: black;
+    border: 2px black solid;
+    border-radius: 5px;
+    box-shadow: 10px 8px 5px rgb(78, 78, 78);
+    background-color: rgb(174, 173, 171);;
+    padding: 0.5%;
+}
+
+.CommandeValide a:hover {
+    background-color: rgb(63, 74, 68);
+}
